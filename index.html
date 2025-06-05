@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do-application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="center">
+      <main class="container-main">
+        <header>
+          <h1 class="header-txt">To-do-list</h1>
+        </header>
+        <div class="container-input flex">
+          <input
+            id="input-box"
+            class="input-box"
+            placeholder="Add a new task ..."
+          />
+          <button id="newtodo" class="button-add" type="submit">Add</button>
+        </div>
+        <div class="option-button-container flex">
+          <button id="all-selected" class="selected-button" onclick="render()">
+            All
+          </button>
+          <button id="active-selected" class="option-button" onclick="render()">
+            Active
+          </button>
+          <button
+            id="complete-selected"
+            class="option-button flex"
+            onclick="render()"
+          >
+            Completed
+          </button>
+        </div>
+        <div id="main-list" class="container-main-list"></div>
+        <footer class="footer-container">
+          <span class="footer-txt">Powered by </span>
+          <a href="https://legacy.pinecone.mn/" class="footer-link">
+            Pinecone academy</a
+          >
+        </footer>
+      </main>
+    </div>
+    <script src="./domtodo.js"></script>
+  </body>
+</html>
